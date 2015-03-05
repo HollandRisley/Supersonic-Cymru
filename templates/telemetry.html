@@ -1,0 +1,196 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+			<title>Bloodhound - HPC Wales</title>
+			<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />	
+			<!-- STYLESHEETS ====================================================================================== -->
+			<link type="text/css" rel="stylesheet" href="../css/960.css" />
+    		<link type="text/css" rel="stylesheet" href="../css/fancybox.css" />
+    		<link type="text/css" rel="stylesheet" href="../css/global.css" />
+			<!-- ================================================================================================== -->
+			<!-- JAVASCRIPT ======================================================================================= -->
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+			<script type="text/javascript" src="../scripts/Mentor_Flexslider.js"></script>
+			<script type="text/javascript" src="../scripts/fancybox.js"></script>
+			<script type="text/javascript" src="../scripts/application.js"></script>
+
+			<!-- bloodhound -->
+			<link rel="stylesheet" href="../css/bloodhound.crush.css"/>
+			<script src="../scripts/bloodhound-modernizr.min.js"></script>
+
+			<script src="../scripts/raphael-js/raphael.min.js"></script>
+			<script src="../scripts/raphael-js/g.raphael.min.js"></script>
+			<script src="../scripts/raphael-js/g.line.min.js"></script>
+			<script src="../scripts/bloodhound-telemetry.js"></script>
+
+
+			<!-- ================================================================================================== -->
+		</head>
+		
+		<body class="front-end hpc4schools">
+			<!-- HEADER ==========================================================================================-->
+				<div class="siteHeader">
+					<div>
+						<a href="index.html" class="siteLogo">HPC Wales - Cymru</a>
+						<div class="navMain">
+							<ul>
+								<li>
+								    <a href="index.html">Home</a>
+								</li>
+								<li>
+								    <a href="calculator.html">Calculator</a>
+								</li>
+								<li>
+								    <a href="wait.html">Wait</a>
+								</li>
+								<li>
+								    <a href="telemetry.html">Telemetry</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- ================================================================================================= -->
+				
+				<!-- CONTENT ========================================================================================= -->
+				<div class="siteContent">
+<div class="container_12">
+
+<div class="contentBlock_12 container">
+<div class="grid_12 block">
+
+<h1>Your race telemetry...</h1>
+
+<div class="bh-preamble">
+<p>Rollover the graph to see the forces acting on the vehicle.</p><!-- Click the circles to view a 3D render showing features of the flow around your design.</p>
+-->
+<p>The thrust, drag and weight forces are resolved around the centre of gravity which is located exactly between the front and rear axles. The vertical aerodynamic force is shown split between the axles, to account for the pitching moment.</p>
+<!--
+<p>The thrust, drag and weight forces are resolved around the centre of gravity which is exactly between both axles. The forces at the axles do not include the weight force.</p>
+-->
+</div>
+</div>
+
+<div class="grid_7 block">
+    <div class="bh-telemetry-forces">
+        <img src="../images/telemetry-car.jpg" alt=""/>
+        <div class="bh-force -vert -weight">
+            <div><img src="parts/down.svg" width="20" height="16" alt="" /></div>
+        </div>
+            <div class="bh-force__caption -weight" style="width: 120px; left: 460px; top: 350px;">
+                <div class="bh-force__caption-body">
+                </div>
+            </div>
+
+        <div class="bh-force -horz -drag">
+            <div><img src="parts/right.svg" width="16" height="20" alt="" /></div>
+        </div>
+
+            <div class="bh-force__caption -drag" style="width: 120px; left: 780px; top: 180px;">
+                <div class="bh-force__caption-body">
+                </div>
+            </div>
+
+        <div class="bh-force -horz -thrust">
+            <div><img src="parts/left.svg" width="16" height="20" alt="" /></div>
+        </div>
+
+            <div class="bh-force__caption -thrust" style="width: 130px; left: 80px; top: 180px;">
+                <div class="bh-force__caption-body">
+                </div>
+            </div>
+
+
+        <div class="bh-force -vert -lift-front">
+            <div><img src="parts/up.svg" width="20" height="16" alt="" /></div>
+        </div>
+
+            <div class="bh-force__caption -lift-front" style="width: 150px; left: 150px; top: 350px;">
+                <div class="bh-force__caption-body">
+                </div>
+            </div>
+
+
+        <div class="bh-force -vert -lift-rear">
+            <div><img src="parts/up.svg" width="20" height="16" alt="" /></div>
+        </div>
+
+            <div class="bh-force__caption -lift-rear" style="width: 150px; left: 730px; top: 350px;">
+                <div class="bh-force__caption-body">
+                </div>
+            </div>
+
+    </div>
+</div>
+<!--
+<div class="grid_5 block">
+    <img src="images/bloodhound-render.jpg" alt="" id="bh-telemetry-render"/>
+</div>
+-->
+
+
+<div class="grid_12 block">
+<div class="bh-telemetry">
+    <div class="bh-telemetry__chart">
+        <div id="bh-velocity-panel" role="tabpanel" aria-labelledby="bh-velocity"></div>
+        <div id="bh-acceleration-panel" role="tabpanel" aria-labelledby="bh-acceleration"></div>
+        <div id="bh-other-panel" role="tabpanel" aria-labelledby="bh-other"></div>
+    </div>
+    <ul class="bh-telemetry__tabs" role="tablist">
+        <li><a href="#" role="tab" aria-controls="bh-velocity-panel" id="bh-velocity">Speed / Time</a></li>
+        <li><a href="#" role="tab" aria-controls="bh-acceleration-panel" id="bh-acceleration">Acceleration / Time</a></li>
+        <li><a href="#" role="tab" aria-controls="bh-other-panel" id="bh-other">Speed / Distance</a></li>
+    </ul>
+</div>
+<!--/ .bh-telemetry -->
+</div>
+<!--/ .grid_12 -->
+<div style="display:none"><div id="CSV">
+orem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut vehicula diam, vitae porta sapien. Pellentesque vehicula et erat ac aliquam. Sed id ante quis nulla tincidunt sodales in at libero. Donec interdum dolor ut massa posuere suscipit. Vivamus sed eros ac lectus maximus pulvinar eu vitae sem. Nullam ullamcorper, turpis in ultrices facilisis, nunc odio fringilla turpis, in auctor nunc justo vel tellus. Proin tempor mauris et purus cursus, sed consequat magna posuere. Morbi tincidunt quam sit amet tristique mollis. Morbi cursus sapien in cursus sodales. Suspendisse nec quam urna. Etiam sodales nec ex viverra rutrum. Duis vitae nisl non nulla mattis tincidunt. Morbi id ex consequat, consectetur nisl sit amet, aliquam erat. Sed laoreet dui a egestas laoreet.
+
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse elementum porttitor neque, sit amet placerat felis. Vestibulum ut posuere mi, et maximus arcu. Quisque dictum interdum mauris et tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean luctus dui eget sapien venenatis, non pharetra tortor tristique. In augue libero, mollis vitae feugiat quis, accumsan a velit. Maecenas cursus metus eget interdum iaculis. Quisque nec orci eget lorem pretium varius. Fusce tempor feugiat bibendum. Aliquam erat volutpat. Nam faucibus purus nec elit euismod bibendum. Maecenas sagittis nibh vel lectus congue, at laoreet quam condimentum. Cras ex est, facilisis vitae lorem et, dignissim dapibus ante. Sed eu dolor lectus. Phasellus ex nisi, venenatis et felis nec, condimentum vestibulum sapien.
+</div></div>
+
+<div class="grid_4 block">
+    <a  href="#CSV" id="download-csv-gif"  class="bh-telemetry-btn">View CFD</a>
+</div>
+
+<div class="grid_4 block">
+    <a href="#" id="download-csv"  class="bh-telemetry-btn">Download CFD</a>
+</div>
+
+<div class="grid_4 block">
+    <a href="#" id="download-csv"  class="bh-telemetry-btn">Download .csv</a>
+</div>
+
+<div class="grid_4 block">
+    <a href="landing.html" class="bh-telemetry-btn tryagain">Try again</a>
+</div>
+
+</div>
+
+
+<br /><br /><br />
+
+</div>
+</div>
+</div>
+
+				<div class="clearfix"></div>
+				<!-- ================================================================================================= -->
+			
+    
+			    <!-- FOOTER ========================================================================================== -->				
+				<div class="siteFooter">
+				    <div class="container_12 clearfix">
+					    <div class="grid_10 clearfix">
+						    <span>Copyright © 2015 HPC Wales</span>
+					    </div>
+					</div>
+				</div>
+	<!-- ================================================================================================= -->
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+			<title>Bloodhound - HPC Wales</title>
+			<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />	
+			<!-- STYLESHEETS ====================================================================================== -->
+			<link type="text/css" rel="stylesheet" href="../css/960.css" />
+    		<link type="text/css" rel="stylesheet" href="../css/fancybox.css" />
+    		<link type="text/css" rel="stylesheet" href="../css/global.css" />
+			<!-- ================================================================================================== -->
+			<!-- JAVASCRIPT ======================================================================================= -->
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+			<script type="text/javascript" src="../scripts/Mentor_Flexslider.js"></script>
+			<script type="text/javascript" src="../scripts/fancybox.js"></script>
+			<script type="text/javascript" src="../scripts/application.js"></script>
+
+			<!-- bloodhound -->
+			<link rel="stylesheet" href="../css/bloodhound.crush.css"/>
+			<script src="../scripts/bloodhound-modernizr.min.js"></script>
+
+			<script src="../scripts/mustache-js/mustache.min.js"></script>
+			<script src="../scripts/countdown.js"></script>
+			<script src="../scripts/bloodhound-wait.js"></script>
+
+			<!-- ================================================================================================== -->
+		</head>
+		
+		<body class="front-end hpc4schools">
+			<!-- HEADER ==========================================================================================-->
+				<div class="siteHeader">
+					<div>
+						<a href="index.html" class="siteLogo">HPC Wales - Cymru</a>
+						<div class="navMain">
+							<ul>
+								<li>
+								    <a href="index.html">Home</a>
+								</li>
+								<li>
+								    <a href="calculator.html">Calculator</a>
+								</li>
+								<li>
+								    <a href="wait.html">Wait</a>
+								</li>
+								<li>
+								    <a href="telemetry.html">Telemetry</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- ================================================================================================= -->
+				
+				<!-- CONTENT ========================================================================================= -->
+				<div class="siteContent">
+					<div class="container_12">
+
+					<div class="contentBlock_12 container">
+					<div class="grid_12 block">
+
+					<div class="bh-eta">
+					    <img src="../images/ajax-loader-resized.gif" alt=""/> <b>ETA</b>
+					    <span class="bh-eta-countdown"></span>
+					</div>
+
+					<div class="bh-preamble">
+					    <h1 class="bh-preamble__hA">Calculating your results...</h1>
+					    <p>The performance of your design is being evaluated over the whole race using a virtual wind tunnel that makes uses of a high performance computing system called Blue Crystal at Bristol University.
+					      <!--  <a href="#">How does this work?</a>-->
+					    </p>
+					</div>
+
+					<h2 class="bh-preamble__hB">Why not explore our Bloodhound videos and features below while you're waiting:</h2>
+
+					<div class="bh-gallery">
+					    <div class="bh-gallery__stage"></div>
+					    <div class="bh-gallery__flexslider flexslider"></div>
+					</div><!--/ .bh-gallery -->
+
+					<script type="text/html" id="tpl-bh-gallery-flexslider">
+					<ul class="slides">
+					{{#slides}}
+					    <li><a href="http://www.youtube.com/watch?v={{ytid}}" data-index="{{index}}" title="{{title}}">
+					    {{#preview}}
+					        <img src="{{preview}}" alt="{{title}}"/>
+					    {{/preview}}
+					    {{^preview}}
+					        <img src="http://i.ytimg.com/vi/{{ytid}}/1.jpg" alt="{{title}}"/>
+					    {{/preview}}
+					    </a></li>
+					{{/slides}}
+					</ul>
+					</script>
+
+					<script type="text/html" id="tpl-bh-gallery-stage">
+					<iframe width="100%" height="445" src="{{embed_url}}" frameborder="0" allowfullscreen class="bh-gallery__frame"></iframe>
+
+					<div class="bh-gallery__body">
+					{{#title}}
+					    <h3 class="bh-gallery__title">{{title}}</h3>
+					{{/title}}
+					{{#description}}
+					    <div class="bh-gallery__desc">
+					        <p>{{description}}</p>
+					    </div>
+					{{/description}}
+
+					<h3 class="bh-gallery__title">More videos...</h3>
+					</div>
+					</script>
+
+					</div>
+					</div>
+					<div class="grid_8 block">
+					<!--
+					    <h2>Feedback on your run</h2>
+					    <p>Not a bad run! You completed the course in your best time yet. Lorem ipsum dolor sit amet din bong dang rendang et bing. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					-->
+					</div>
+
+					<div class="grid_4 block">
+					    <a href="landing.html" class="bh-telemetry-btn tryagain">Try again</a>
+					<!--    <a href="#" class="bh-telemetry-btn">Share your results</a> -->
+					</div>
+
+					<br /><br /><br />
+
+					</div>
+					</div>
+					</div>
+					<div class="clearfix"></div>
+				<!-- ================================================================================================= -->
+			
+    
+			    <!-- FOOTER ========================================================================================== -->				
+				<div class="siteFooter">
+				    <div class="container_12 clearfix">
+					    <div class="grid_10 clearfix">
+						    <span>Copyright © 2015 HPC Wales</span>
+					    </div>
+					</div>
+				</div>
+	<!-- ================================================================================================= -->
+</body>
+
+</html>
